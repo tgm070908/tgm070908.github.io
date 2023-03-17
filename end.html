@@ -184,9 +184,9 @@ body {
     <script>
 window.onload=function(){
 alert("gf");
-var id = getParameter("id");
+const urlParams = new URL(location.href).searchParams;
+const id = urlParams.get('id');
 alert(id);
-var user_name = getParameter("psd");
 document.getElementById('re').innerText = id + "님 로그인해주셔서 감사합니다"
 
 console.log("id : "+id);
