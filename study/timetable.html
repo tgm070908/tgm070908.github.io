@@ -5,11 +5,21 @@
     @import url("https://tgm070908.github.io/CSS/style.css");
   </style>
   <script src="js/script.js"></script>
+  <script>
+    window.onload=function() {
+      var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
+      var today = new Date().getDay();
+      var todayLabel = week[today];
+      document.getElementById('time').innerText = todayLabel;
+  
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <div class="components">
       <h1>1학년 8반 시간표</h1>
+      
       <br/>
       <div>
         <div style="display: flex;">
